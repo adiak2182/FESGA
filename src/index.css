@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-zinc-200;
+  }
+}
+
+@layer components {
+  .presentation-mode {
+    @apply text-lg;
+  }
+
+  .presentation-mode h2 {
+    @apply text-5xl mb-8;
+  }
+
+  .presentation-mode .stat-card {
+    @apply p-8;
+  }
+
+  .presentation-mode .chart-container {
+    @apply h-[500px];
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-zinc-800 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-zinc-700;
+  }
+}
